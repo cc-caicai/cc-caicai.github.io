@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js " data-cbid="9f55e120-3e25-41ae-bfeb-361a726c0a09" type="text/javascript" async></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNN7F7HDFD "></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-JNN7F7HDFD');
+  </script>
+  
+  <meta charset="utf-8">
+  <meta name="description" content="Few-shot Medical Anomaly Detection through Centroid Consultation Back and Test-Time Self-Calibration">
+  <meta name="keywords" content="Anomaly Detection, Medical Image Analysis, Few-shot Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Few-shot Medical Anomaly Detection through Centroid Consultation Back and Test-Time Self-Calibration</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        bulmaCarousel.attach('#results-carousel', {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          infinite: true,
+          autoplay: true
+        });
+      }, 500);
+    });
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans |Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css ">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="./static/images/network_icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title">CFR-Net: Collaborative Feature Refinement Network for Medical Image Anomaly Detection</h1> -->
+          <h1 class="title is-1 publication-title">
+            Few-shot Medical Anomaly Detection through Centroid Consultation Back and Test-Time Self-Calibration
+          </h1>          
+          <div class="is-size-5 publication-authors">
+    <span class="author-block">
+        <a href="https://cc-caicai.github.io/">Zihan Nie</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://xmh-l.github.io/">Muhao Xu</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=0JzLZ0kAAAAJ ">Yuan Cui</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="http://web.sdu.edu.cn/wylab/info/1028/1174.htm ">Hua Wei</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://wylab.sdu.edu.cn/info/1028/1173.htm ">Wei Yi</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=tRi0nMcAAAAJ ">Sijie Niu</a><sup>3</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=VE4EBnoAAAAJ ">Yi Wan</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://bme.bjmu.edu.cn/szdw/211941.htm ">Xunbin Wei</a><sup>4,5,6</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=Ybvxp5oAAAAJ&hl=zh-CN&oi=ao ">Weiye Song</a><sup>*1,2</sup>
+    </span>
+</div>
+
+<div class="is-size-6 has-text-centered">
+</div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>School of Mechanical Engineering, Shandong University</span>
+            <span class="author-block"><sup>2</sup>Key Laboratory of High Efficiency and Clean Mechanical Manufacture, Shandong University, Ministry of Education</span>
+            <span class="author-block"><sup>3</sup>Shandong Key Laboratory of Ubiquitous Intelligent Computing, University of Jinan</span>
+            <span class="author-block"><sup>4</sup>Institute of Medical Technology and Cancer Hospital, Peking University</span>
+            <span class="author-block"><sup>5</sup>Institute of Advanced Clinical Medicine and Biomedical Engineering Department, Peking University</span>
+            <span class="author-block"><sup>6</sup>Peking University International Cancer Institute</span>
+
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              <!-- </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.13082 "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/f_78GnHsiM0" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/cc-caicai/Few-shot-Medical-Anomaly-Detection-through-Centroid-Consultation-Back-and-Test-Time-Self-Calibration " class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/abs.png" alt="Abstract of the Method" style="width: 100vw; height: auto; display: block;">
+      <h2 class="subtitle" style="text-align: justify;">
+    To accurately detect anomalies in medical images in the few-shot setting, the method leverages the world knowledge of visual language models and combines two innovative modules: Centerpoint Consultation Backtracking (CCB) and Test-Time Self-Calibration (TSC).
+    This is particularly important when the target abnormal region is difficult to detect directly, requiring the model to distinguish subtle pathological features from background noise.
+    Through dynamic clustering and test-time score calibration, our method ensures accurate and reliable detection.
+</h2>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           Accurate detection of anomalies in medical images is of paramount importance for the early diagnosis and effective treatment of diseases. However, this task is often impeded by the scarcity of labeled data, especially in specialized medical domains, which necessitates the development of few-shot learning methods that can generalize well from limited examples. Despite recent advances, existing few-shot anomaly detection methods still face difficulty in distinguishing subtle pathological features from background noise due to limited data which leads to high background false positives. Moreover, the anomaly scores may be disproportionately influenced by localized prominent noise or artifacts, rather than accurately reflecting the true extent of abnormalities across the entire image, resulting in unreliable detection results. 
+          </p>
+          <p>
+          To address these challenges, we propose a novel few-shot medical image anomaly detection framework that incorporates two innovative <strong>Plug-and-Play</strong> modules: the <strong>Centroid Consultation Back (CCB)</strong> module, which enhances local anomaly features through dynamic clustering and global context backpropagation to effectively reduce background false positives while improbing the sensitivity to subtle anomalies; and the <strong>Test-Time Self-Calibration (TSC)</strong> module, which optimizes anomaly scores in a fully unsupervised manner at test time to mitigate the influence of localized prominent noise or artifacts, ensuring that the anomaly scores accurately reflect the true extent of abnormalities across the entire image without additional training.
+          </p>
+          <p>
+            Evaluated on medical image datasets of multiple modalities, our framework achieves state-of-the-art performance, with an average AUROC of <strong>82.16%</strong> on anomaly classification and <strong>96.50%</strong> on anomaly localization, providing a robust and reliable solution for clinical anomaly detection.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<!-- Method Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width"> -->
+      <div style="text-align: center;">
+        <h2 class="title is-3">Method</h2>
+        <img src="./static/images/method.png" alt="Architecture of the Method" />
+        <div class="content has-text-justified" style="margin-top: 2rem;">
+
+          <p>
+            For textual prompts, we combine manual and learnable text as abnormal prompts, and only learnable for normal. The prompts are encoded by the CLIP text encoder.
+          </p>
+          <p>
+            For images, CLIP-encoder extracts global CLS features and local patch features simultaneously from few-shot input images. Subsquently, the CCB module uses dynamic clustering and central self-attention to perform global context feedback, enhancing local anomaly representation and suppressing background artifacts.
+          </p>
+          <p>
+            During test phase, the TSC module constructs a sparse similarity map between samples and iteratively optimizes the anomaly score using PageRank to mitigate the influence of local noise. 
+          </p>   
+          <p>
+            The anomaly map computation branch fuses global and local features and compares them with textual hint features to directly optimize the segmentation mask and indirectly improve localization accuracy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="hero is-light is-small"> <!-- Use 'hero' to extend background fully -->
+  <div class="hero-body"> <!-- Ensures the background fills the full width -->
+    <div class="container"> <!-- Remove 'is-max-desktop' to allow full width content -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://youtu.be/f_78GnHsiM0 " frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container" style="max-width: 100%;"> <!-- Remove max width limit -->
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered"> <!-- Ensures full width -->
+        <h2 class="title is-3">Comparison with SOTA results on AUROC</h2>
+
+        <div class="has-text-centered">
+          <img src="./static/images/newtable.png" alt="Result Comparison" style="max-width: 60%; width: auto; height: auto; display: block; margin: 0 auto;" />
+        </div>
+        <br />
+       <p style="font-size: 1rem; color: #444; max-width: 900px; margin: 0 auto 20px auto; text-align: left;">
+        In the table, the bolded items represent the SOTA methods, and the underlined ones are suboptimal. 
+        Our method achieved 6 out of 9 tasks including anomaly classification (Image) and location (Pixel) with state-of-the-art performance and ranked second in other 3 of them.
+      </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+                
+<!-- Grounding Image Carousel -->
+<section class="hero is-small" style="background-color: white; padding: 20px 0;">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Visualization of Anomaly Responses</h2>
+      
+      <!-- Instruction text -->
+      <p class="has-text-left" style="font-size: 1rem; margin-bottom: 15px;">
+       We present qualitative comparisons of anomaly localization maps and classification heatmaps. The results are arranged from left to right as: input image, predictions from state-of-the-art methods including CFLOW-AD, DiAD, msflow, and URD, our method, and ground truth annotations. CFR-Net produces more compact and spatially precise anomaly responses, especially around lesion regions and layer-wise abnormal structures.
+      </p>
+
+      
+      <div class="swiper swiper-container visualization-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="static/images/maps1.png" alt="Visualization result 1" /></div>
+          <div class="swiper-slide"><img src="static/images/maps2.png" alt="Visualization result 2" /></div>
+          <div class="swiper-slide"><img src="static/images/maps3.png" alt="Visualization result 3" /></div>
+          <div class="swiper-slide"><img src="static/images/maps4.png" alt="Visualization result 4" /></div>
+          <div class="swiper-slide"><img src="static/images/maps5.png" alt="Visualization result 5" /></div>
+          <div class="swiper-slide"><img src="static/images/maps6.png" alt="Visualization result 6" /></div>
+        </div>
+        <div class="swiper-button-prev visualization-swiper-prev"></div>
+        <div class="swiper-button-next visualization-swiper-next"></div>
+        <div class="swiper-pagination visualization-swiper-pagination"></div>
+      </div>
+
+      
+      <!-- Fixed Annotation -->
+      <p class="has-text-centered" style="font-size: 0.9rem; margin-top: 10px;">
+        Examples of localization maps and classification heatmaps across different medical datasets.<br>
+      </p>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+/* Center each visualization slide. */
+.visualization-swiper .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.visualization-swiper .swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visualization-swiper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+}
+
+.visualization-swiper-pagination {
+  bottom: 0 !important;
+}
+</style>
+
+<!-- Swiper.js Dependency -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Carousel Initialization -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".visualization-swiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".visualization-swiper-next",
+        prevEl: ".visualization-swiper-prev",
+      },
+      pagination: {
+        el: ".visualization-swiper-pagination",
+        clickable: true,
+      },
+    });
+  });
+</script>
+
+<hr>
+
+<section class="section">
+  <div class="container" style="max-width: 120%;"> <!-- Remove max width limit -->
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered"> <!-- Ensures full width -->
+        <h2 class="title is-3">Results of classification scores</h2>
+
+        <div class="has-text-centered">
+          <img src="./static/images/scorewrite.png" alt="Result Comparison" style="max-width: 60%; width: auto; height: auto; display: block; margin: 0 auto;" />
+        </div>
+        <br />
+       <p style="font-size: 1rem; color: #444; max-width: 900px; margin: 0 auto 20px auto; text-align: left;">
+        Examples of classification scores of normal samples and abnormal samples. The predicted scores by our method are shown with each sample. The higher the score, the more likely to be an anomaly.
+      </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+
+<section class="hero is-small" style="background-color: white; padding: 20px 0;">
+  <div class="container" style="max-width: 80%;"> <!-- Matches previous section -->
+
+    <!-- Related Links Section -->
+    <div class="columns is-centered">
+      <div class="column is-full has-text-left"> <!-- Full width & centered text -->
+        <h2 class="title is-3">Related links</h2>
+
+        <div class="content has-text-left" style="margin: 0 auto; max-width: 80%;">
+          <p>
+            Many excellent works have collectively contributed to our work.
+          </p>
+          <p>
+            [1] <a href="https://github.com/FuNz-0/PromptAD ">Li, Xiaofan, et al. "PromptAD: Learning Prompts with only Normal Samples for Few-Shot Anomaly Detection" CVPR. 2024.</a>
+          </p>
+          <p>
+            [2] <a href="https://github.com/openai/CLIP ">Alec Radford, et al. "Learning Transferable Visual Models From Natural Language Supervision" PMLR. 2021.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Links Section -->
+
+  </div>
+</section>
+
+
+
+
+<hr>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{NIE2026113261,
+title = {Few-shot Medical Anomaly Detection through Centroid Consultation Back and Test-Time Self-Calibration},
+journal = {Pattern Recognition},
+pages = {113261},
+year = {2026},
+issn = {0031-3203},
+doi = {https://doi.org/10.1016/j.patcog.2026.113261},
+url = {https://www.sciencedirect.com/science/article/pii/S0031320326002268},
+author = {Zihan Nie and Muhao Xu and Yuan Cui and Hua Wei and Wei Yi and Sijie Niu and Yi Wan and Xunbin Wei and Weiye Song},
+keywords = {Anomaly Detection, Medical Image Analysis, Few-shot Learning},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="content has-text-centered">
+          <!-- Link to Paper -->
+          <a class="icon-link" href="" target="_blank" title="View Paper on arXiv">
+              <i class="fas fa-file-pdf fa-2x"></i>
+          </a>
+          <!-- Link to GitHub -->
+          <a class="icon-link" class="external-link" href="https://github.com/cc-caicai/Few-shot-Medical-Anomaly-Detection-through-Centroid-Consultation-Back-and-Test-Time-Self-Calibration" target="_blank" title="View Project on GitHub">
+              <i class="fab fa-github fa-2x"></i>
+          </a>
+      </div>
+      <div class="columns is-centered" style="margin-top: 20px;">
+          <div class="column is-8">
+              <div class="content has-text-centered">
+                  <p>
+                      This website is licensed under a
+                      <a href="http://creativecommons.org/licenses/by-sa/4.0/ " rel="license" target="_blank">
+                          Creative Commons Attribution-ShareAlike 4.0 International License
+                      </a>.
+                  </p>
+                  <p>
+                      Template adapted from
+                      <a href="https://github.com/nerfies/nerfies.github.io " target="_blank">Nerfies</a>.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+
+</html>
