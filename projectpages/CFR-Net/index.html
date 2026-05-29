@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js " data-cbid="9f55e120-3e25-41ae-bfeb-361a726c0a09" type="text/javascript" async></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNN7F7HDFD "></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-JNN7F7HDFD');
+  </script>
+  
+  <meta charset="utf-8">
+  <meta name="description" content="CFR-Net: Collaborative Feature Refinement Network for Medical Image Anomaly Detection">
+  <meta name="keywords" content="Unsupervised learning， Medical Image Analysis， Anomaly Detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>CFR-Net: Collaborative Feature Refinement Network for Medical Image Anomaly Detection</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        bulmaCarousel.attach('#results-carousel', {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          infinite: true,
+          autoplay: true
+        });
+      }, 500);
+    });
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans |Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css ">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+ <!-- <link rel="icon" href="./static/images/robotic_icon.png"> -->
+  <link rel="icon" href="./static/images/network_icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title">CFR-Net: Collaborative Feature Refinement Network for Medical Image Anomaly Detection</h1> -->
+          <h1 class="title is-1 publication-title">
+            CFR-Net: Collaborative Feature Refinement Network for Medical Image Anomaly Detection
+          </h1>          
+          <div class="is-size-5 publication-authors">
+    <span class="author-block">
+        <a href="https://cc-caicai.github.io/">Zihan Nie</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://xmh-l.github.io/">Muhao Xu</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://research.monash.edu/en/persons/wei-feng/">Wei Feng</a><sup>3,4</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=0JzLZ0kAAAAJ">Yuan Cui</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://www.mech.sdu.edu.cn/info/1135/137951.htm">Hua Wei</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=tRi0nMcAAAAJ">Sijie Niu</a><sup>5</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=VE4EBnoAAAAJ">Yi Wan</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://bme.bjmu.edu.cn/szdw/211941.htm">Xunbin Wei</a><sup>6,7,8</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=Ybvxp5oAAAAJ&hl=zh-CN&oi=ao">Weiye Song</a><sup>*1,2</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://research.monash.edu/en/persons/zongyuan-ge/?_gl=1*cu077a*_ga*MTgzMjIxNTU4OC4xNzc3NDQwMTg4*_ga_E3JVRYC3HG*czE3ODAwMjU4NzckbzExJGcxJHQxNzgwMDI1ODgzJGo1NCRsMCRoMA..">Zongyuan Ge</a><sup>3,4</sup>
+    </span>
+</div>
+
+<div class="is-size-6 has-text-centered">
+</div>
+
+<div class="is-size-5 publication-authors">
+    <span class="author-block"><sup>1</sup>School of Mechanical Engineering, Shandong University</span>
+    <span class="author-block"><sup>2</sup>Key Laboratory of High Efficiency and Clean Mechanical Manufacture, Shandong University, Ministry of Education</span>
+    <span class="author-block"><sup>3</sup>Monash University</span>
+    <span class="author-block"><sup>4</sup>Airdoc-Monash Research, Monash University</span>
+    <span class="author-block"><sup>5</sup>Shandong Key Laboratory of Ubiquitous Intelligent Computing, University of Jinan</span>
+    <span class="author-block"><sup>6</sup>Institute of Medical Technology and Cancer Hospital, Peking University</span>
+    <span class="author-block"><sup>7</sup>Institute of Advanced Clinical Medicine and Biomedical Engineering Department, Peking University</span>
+    <span class="author-block"><sup>8</sup>Peking University International Cancer Institute</span>
+</div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link.
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a> -->
+              <!-- </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.13082 "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/qM88ArDTKVA" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/cc-caicai/CFR-Net" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/abstract.png" alt="Abstract of the Method" style="width: 100vw; height: auto; display: block;">
+      <h2 class="subtitle" style="text-align: justify;">
+        To address domain discrepancy and complex feature patterns in medical image anomaly detection, we propose CFR-Net, a collaborative feature refinement framework trained only on normal data. CFR-Net refines features from a frozen teacher encoder and a trainable student encoder using a shared Multi-Path Feature Refinement Module (MPFRM), allowing generic visual references and medical-domain adaptive representations to be processed under common refinement rules. With cross-space consistency, variance-sensitive weighting, and dynamic homework-set reorganization, CFR-Net achieves competitive anomaly classification and strong anomaly localization across multiple medical imaging benchmarks.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Medical image anomaly detection remains challenging because networks pretrained on natural images often exhibit limited adaptability to medical images, where abnormal patterns appear as fine-grained local shifts, multi-scale contextual mismatches, and orientation-sensitive structural deviations. To address this, we propose the <strong>Collaborative Feature Refinement Network (CFR-Net)</strong>, which combines shared teacher-student <strong>feature refinement before decoding</strong> with <strong>cross-space consistency after decoding</strong>. CFR-Net refines frozen teacher features and trainable student features using a <strong>Multi-Path Feature Refinement Module (MPFRM)</strong> with shared parameters, imposing <strong>common multi-path refinement rules</strong> on generic visual references and representations adapted to the medical domain, thereby mitigating domain discrepancy while modeling local, multi-scale, and orientation-sensitive feature characteristics. A <strong>variance-sensitive objective</strong> and <strong>dynamic "homework set" reorganization</strong> further support layer-adaptive consistency learning. Experiments on medical benchmarks show that CFR-Net achieves competitive anomaly classification and strong anomaly localization performance when trained on normal data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<!-- Method Section -->
+<section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div style="text-align: center;">
+                    <h2 class="title is-3">Method</h2>
+                    <img src="./static/images/method.png" alt="Architecture of the Method" />
+                    <div class="content has-text-justified" style="margin-top: 2rem;">
+                        <p>
+                            CFR-Net introduces input-side collaborative refinement, where frozen teacher features and trainable student features are refined by MPFRM with shared parameters before decoding.
+                        </p>  
+                        <p>
+                            After decoding, CFR-Net applies output-side cross-space consistency, constraining each decoded stream with the complementary encoder feature space.
+                        </p>   
+                        <p>
+                            Training is further supported by variance-sensitive feature-level weighting and a dynamic homework-set strategy, stabilizing normal-only optimization across hierarchical representations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div style="text-align: center;">
+                    <h2 class="title is-3">Multi-Path Feature Refinement Module</h2>
+                    <img src="./static/images/MPFRM.png" alt="Architecture of the Method" />
+                    <div class="content has-text-justified" style="margin-top: 2rem;">
+                        <p>
+                            MPFRM refines hierarchical teacher and student encoder features through three complementary branches. The variance-weighted branch models patch-level feature dispersion, the multi-scale pyramid branch aggregates contextual information across receptive fields, and the asymmetric convolution branch captures orientation-sensitive structural patterns. Their outputs are integrated with the input encoder features through residual connections before decoding.
+                        </p>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<hr>
+
+<section class="hero is-light is-small"> <!-- Use 'hero' to extend background fully -->
+  <div class="hero-body"> <!-- Ensures the background fills the full width -->
+    <div class="container"> <!-- Remove 'is-max-desktop' to allow full width content -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/qM88ArDTKVA" title="CFR-Net video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container" style="max-width: 100%;"> <!-- Remove max width limit -->
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered"> <!-- Ensures full width -->
+        <h2 class="title is-3">Comparison with Existing Methods on AUROC</h2>
+
+        <div class="has-text-centered">
+          <img src="./static/images/table.png" alt="Result Comparison" style="max-width: 60%; width: auto; height: auto; display: block; margin: 0 auto;" />
+        </div>
+        <br />
+       <p style="font-size: 1rem; color: #444; max-width: 900px; margin: 0 auto 20px auto; text-align: left;">
+        In the table, bold values indicate the best results and underlined values indicate the second-best results. CFR-Net achieves the best performance in 7 out of 9 evaluated tasks, showing particularly strong anomaly localization results while maintaining competitive classification performance across different medical imaging benchmarks.
+      </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+                
+<!-- Grounding Image Carousel -->
+<section class="hero is-small" style="background-color: white; padding: 20px 0;">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Visualization of Anomaly Responses</h2>
+      
+      <!-- Instruction text -->
+      <p class="has-text-left" style="font-size: 1rem; margin-bottom: 15px;">
+       We present qualitative comparisons of anomaly localization maps and classification heatmaps. The results are arranged from left to right as: input image, predictions from state-of-the-art methods including CFLOW-AD, DiAD, msflow, and URD, our method, and ground truth annotations. CFR-Net produces more compact and spatially precise anomaly responses, especially around lesion regions and layer-wise abnormal structures.
+      </p>
+
+      
+      <div class="swiper swiper-container visualization-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="static/images/maps1.png" alt="Visualization result 1" /></div>
+          <div class="swiper-slide"><img src="static/images/maps2.png" alt="Visualization result 2" /></div>
+          <div class="swiper-slide"><img src="static/images/maps3.png" alt="Visualization result 3" /></div>
+          <div class="swiper-slide"><img src="static/images/maps4.png" alt="Visualization result 4" /></div>
+          <div class="swiper-slide"><img src="static/images/maps5.png" alt="Visualization result 5" /></div>
+          <div class="swiper-slide"><img src="static/images/maps6.png" alt="Visualization result 6" /></div>
+        </div>
+        <div class="swiper-button-prev visualization-swiper-prev"></div>
+        <div class="swiper-button-next visualization-swiper-next"></div>
+        <div class="swiper-pagination visualization-swiper-pagination"></div>
+      </div>
+
+      <!-- Fixed Annotation -->
+      <p class="has-text-centered" style="font-size: 0.9rem; margin-top: 10px;">
+        Examples of localization maps and classification heatmaps across different medical datasets.<br>
+      </p>
+      
+    </div>
+  </div>
+</section>
+<style>
+/* 保证每个 slide 居中 */
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visualization-swiper {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.visualization-swiper-pagination {
+  bottom: 0 !important;
+}
+</style>
+
+<!-- Swiper.js Dependency -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css ">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js "></script>
+
+<!-- Carousel Initialization -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".visualization-swiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".visualization-swiper-next",
+        prevEl: ".visualization-swiper-prev",
+      },
+      pagination: {
+        el: ".visualization-swiper-pagination",
+        clickable: true,
+      },
+    });
+  });
+</script>
+
+<hr>
+
+<section class="section">
+  <div class="container" style="max-width: 100%;"> <!-- Remove max width limit -->
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered"> <!-- Ensures full width -->
+        <h2 class="title is-3">Classification Score Visualization</h2>
+
+        <div class="has-text-centered">
+          <img src="./static/images/scorewrite.png" alt="Result Comparison" style="max-width: 60%; width: auto; height: auto; display: block; margin: 0 auto;" />
+        </div>
+        <br />
+       <p style="font-size: 1rem; color: #444; max-width: 900px; margin: 0 auto 20px auto; text-align: left;">
+        Examples of predicted anomaly scores for normal and abnormal samples. Each image is shown with the score predicted by CFR-Net, where a higher score indicates a higher likelihood of being anomalous. These examples illustrate the model's ability to separate normal and abnormal cases under the normal-only training setting.
+      </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{nie2026cfr,
+  title={CFR-Net: Collaborative Feature Refinement Network for Medical Image Anomaly Detection},
+  author={Nie, Zihan and Xu, Muhao and Feng, Wei and Cui, Yuan and Wei, Hua and Niu, Sijie and Wan, Yi and Wei, Xunbin and Song, Weiye and Ge, Zongyuan},
+  journal={},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="content has-text-centered">
+          <!-- Link to Paper -->
+          <a class="icon-link" href="" target="_blank" title="View Paper on arXiv">
+              <i class="fas fa-file-pdf fa-2x"></i>
+          </a>
+          <!-- Link to GitHub -->
+          <a class="icon-link" class="external-link" href="https://github.com/cc-caicai/CFR-Net" target="_blank" title="View Project on GitHub">
+              <i class="fab fa-github fa-2x"></i>
+          </a>
+      </div>
+      <div class="columns is-centered" style="margin-top: 20px;">
+          <div class="column is-8">
+              <div class="content has-text-centered">
+                  <p>
+                      This website is licensed under a
+                      <a href="http://creativecommons.org/licenses/by-sa/4.0/ " rel="license" target="_blank">
+                          Creative Commons Attribution-ShareAlike 4.0 International License
+                      </a>.
+                  </p>
+                  <p>
+                      Template adapted from
+                      <a href="https://github.com/nerfies/nerfies.github.io " target="_blank">Nerfies</a>.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+
+</html>
