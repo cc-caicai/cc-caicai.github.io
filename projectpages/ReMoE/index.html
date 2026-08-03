@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="9f55e120-3e25-41ae-bfeb-361a726c0a09" type="text/javascript" async></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNN7F7HDFD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JNN7F7HDFD');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="ReMoE: Report-Guided Mixture-of-Experts for Multimodal OCT/OCTA Anomaly Detection">
+  <meta name="keywords" content="Medical Anomaly Detection, OCT, OCTA, Mixture-of-Experts, Vision-Language Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="ReMoE: Report-Guided Mixture-of-Experts">
+  <meta property="og:description" content="Report-guided multimodal OCT/OCTA anomaly detection with semantic-aware feature discrepancy modeling.">
+  <meta property="og:image" content="./static/images/teaser.png">
+
+  <title>ReMoE: Report-Guided Mixture-of-Experts for Multimodal OCT/OCTA Anomaly Detection</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+    .paper-figure {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    .teaser-figure {
+      max-width: 60%;
+    }
+    .publication-affiliations {
+      line-height: 1.55;
+      margin-top: 0.9rem;
+    }
+    .publication-emails {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-top: 0.8rem;
+      overflow-wrap: anywhere;
+    }
+    .figure-caption {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 1rem auto 0;
+      max-width: 900px;
+    }
+    .result-number {
+      color: #3273dc;
+      font-weight: 700;
+    }
+    .results-table {
+      margin: 1.5rem auto;
+      min-width: 1120px;
+      width: 100%;
+    }
+    .results-table th,
+    .results-table td {
+      text-align: center !important;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .results-container {
+      max-width: 1400px !important;
+      width: 96%;
+    }
+    .results-table th:first-child,
+    .results-table td[rowspan] {
+      text-align: left !important;
+    }
+    .results-table .input-1 td:not([rowspan]) {
+      background-color: #f4f8fd;
+    }
+    .results-table .input-2 td:not([rowspan]) {
+      background-color: #f2faf6;
+    }
+    .results-table .input-4 td:not([rowspan]) {
+      background-color: #fff8ed;
+    }
+    .results-table .input-1:hover td:not([rowspan]) {
+      background-color: #eaf2fb;
+    }
+    .results-table .input-2:hover td:not([rowspan]) {
+      background-color: #e7f6ee;
+    }
+    .results-table .input-4:hover td:not([rowspan]) {
+      background-color: #fff0d8;
+    }
+    @media screen and (max-width: 768px) {
+      .publication-title {
+        font-size: 2rem !important;
+      }
+      .hero-body {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      .results-table {
+        font-size: 0.8rem;
+      }
+      .teaser-figure {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            ReMoE: Report-Guided Mixture-of-Experts for Multimodal OCT/OCTA Anomaly Detection
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://cc-caicai.github.io/">Zihan Nie</a><sup>1,2,6,&#8224;</sup>,</span>
+            <span class="author-block">Qincheng Qiao<sup>4,5,&#8224;</sup>,</span>
+            <span class="author-block"><a href="https://xmh-l.github.io/">Muhao Xu</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://research.monash.edu/en/persons/wei-feng/">Wei Feng</a><sup>3,6</sup>,</span>
+            <span class="author-block">Xinguo Hou<sup>4,5,*</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=Ybvxp5oAAAAJ">Weiye Song</a><sup>1,2,*</sup>,</span>
+            <span class="author-block"><a href="https://research.monash.edu/en/persons/zongyuan-ge/">Zongyuan Ge</a><sup>3,6</sup></span>
+          </div>
+          <div class="is-size-6 publication-affiliations">
+            <span class="author-block"><sup>1</sup>School of Mechanical Engineering, Shandong University, Jinan, China</span><br>
+            <span class="author-block"><sup>2</sup>Key Laboratory of High Efficiency and Clean Mechanical Manufacture, Shandong University, Ministry of Education, Jinan, China</span><br>
+            <span class="author-block"><sup>3</sup>Monash University, Clayton, VIC 3800, Australia</span><br>
+            <span class="author-block"><sup>4</sup>Department of Endocrinology and Metabolism, Qilu Hospital, Shandong University, Jinan 250012, China</span><br>
+            <span class="author-block"><sup>5</sup>The First Clinical Medical College, Cheeloo College of Medicine, Shandong University, Jinan 250012, China</span><br>
+            <span class="author-block"><sup>6</sup>Airdoc-Monash Research, Monash University, Clayton, VIC 3800, Australia</span>
+          </div>
+          <div class="publication-emails">
+            202414371@mail.sdu.edu.cn, jugking6688@gmail.com, ujnmhxu@hotmail.com,<br>
+            wei.feng@monash.edu, houxinguo@sdu.edu.cn, songweiye@sdu.edu.cn, zongyuan.ge@monash.edu<br>
+            <sup>&#8224;</sup> Equal contribution &nbsp;&nbsp; <sup>*</sup> Corresponding authors
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./static/ReMoE.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/cc-caicai/ReMoE" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img class="paper-figure teaser-figure" src="./static/images/teaser.png" alt="Comparison between visual-centric anomaly detection and report-guided ReMoE">
+      <h2 class="subtitle has-text-justified" style="margin-top: 1.5rem;">
+        ReMoE introduces normal medical-report semantics into multimodal OCT/OCTA anomaly detection. By distilling report knowledge into image-conditioned priors and using those priors to guide mixture-of-experts routing, the model measures semantic-aware rather than purely appearance-level discrepancies.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Multimodal medical anomaly detection identifies samples deviating from normal patterns, where scarce abnormal cases make normality modeling from normal data practical. In retinal Optical Coherence Tomography (OCT) and OCT Angiography (OCTA) anomaly detection, existing unsupervised methods rely on visual feature distributions, reconstruction residuals, or encoder-decoder discrepancies, making anomaly scores depend on appearance-level deviations, while multimodal normality also contains semantic organization described in normal medical reports.
+          </p>
+          <p>
+            To this end, we propose <strong>Report-Guided Mixture-of-Experts (ReMoE)</strong>, which distills normal report semantics into an image-to-text prior student, builds modality-aware priors, and uses <strong>Report-Guided Modality Modulation (RMM)</strong> to modulate features through mixture-of-experts routing. Experiments on a private OCT/OCTA dataset with paired normal reports and the public OCTA500-3MM using pseudo-reports demonstrate state-of-the-art performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <img class="paper-figure" src="./static/images/framework.png" alt="Overview of the ReMoE framework">
+        <p class="figure-caption has-text-justified">
+          ReMoE uses a frozen DINOv2-R encoder with a trainable bottleneck and decoder. A lightweight image-to-text prior student learns from a frozen CLIP text teacher to predict report-related semantics directly from multimodal images. These pseudo-text representations are combined with modality anchors to form modality-aware priors.
+        </p>
+        <div class="content has-text-justified" style="margin-top: 2rem;">
+          <p>
+            RMM uses the priors to route visual experts and modulate paired encoder and decoder features before discrepancy computation. This transforms raw visual discrepancies into semantic-aware discrepancies, allowing the anomaly score to reflect departures from visual normality under report-guided modality conditions.
+          </p>
+          <p>
+            At inference time, ReMoE requires only the four retinal inputs—superficial and deep OCT and OCTA. The student predicts pseudo-text priors without requiring a clinical report for the test case.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container results-container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div class="table-container">
+          <table class="table is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr class="input-1">
+                <th>Category</th>
+                <th>Method</th>
+                <th>Inputs</th>
+                <th>Protocol</th>
+                <th>Private I-AUROC</th>
+                <th>Private I-AP</th>
+                <th>OCTA500 I-AUROC</th>
+                <th>OCTA500 I-AP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="6">Visual only<br>unimodal</td>
+                <td>MSFlow</td><td>1</td><td>Avg. 4 inputs</td><td>0.6532 &plusmn; 0.0067</td><td>0.7969 &plusmn; 0.0048</td><td>0.8432 &plusmn; 0.0074</td><td>0.8568 &plusmn; 0.0064</td>
+              </tr>
+              <tr class="input-1"><td>URD</td><td>1</td><td>Avg. 4 inputs</td><td>0.6773 &plusmn; 0.0049</td><td>0.8091 &plusmn; 0.0050</td><td>0.8344 &plusmn; 0.0079</td><td>0.8621 &plusmn; 0.0072</td></tr>
+              <tr class="input-1"><td>Dinomaly</td><td>1</td><td>Avg. 4 inputs</td><td>0.7175 &plusmn; 0.0015</td><td>0.8511 &plusmn; 0.0010</td><td>0.8242 &plusmn; 0.0061</td><td>0.8302 &plusmn; 0.0097</td></tr>
+              <tr class="input-1"><td>RD4AD</td><td>1</td><td>Avg. 4 inputs</td><td>0.6903 &plusmn; 0.0013</td><td>0.7746 &plusmn; 0.0129</td><td>0.8432 &plusmn; 0.0017</td><td>0.8478 &plusmn; 0.0034</td></tr>
+              <tr class="input-1"><td>PatchCore</td><td>1</td><td>Avg. 4 inputs</td><td>0.6776 &plusmn; 0.0009</td><td>0.7324 &plusmn; 0.0010</td><td>0.6973 &plusmn; 0.0038</td><td>0.7367 &plusmn; 0.0043</td></tr>
+              <tr class="input-1"><td>SimpleNet</td><td>1</td><td>Avg. 4 inputs</td><td>0.7258 &plusmn; 0.0053</td><td>0.8386 &plusmn; 0.0029</td><td>0.7901 &plusmn; 0.0042</td><td>0.8142 &plusmn; 0.0081</td></tr>
+              <tr class="input-2">
+                <td rowspan="4">Visual only<br>multimodal</td>
+                <td>MMRAD</td><td>2</td><td>Avg. 2 pairs</td><td>0.5705 &plusmn; 0.0358</td><td>0.7392 &plusmn; 0.0225</td><td>0.6549 &plusmn; 0.0482</td><td>0.7121 &plusmn; 0.0100</td>
+              </tr>
+              <tr class="input-2"><td>TRMUAD</td><td>2</td><td>Avg. 2 pairs</td><td>0.7016 &plusmn; 0.0027</td><td>0.8236 &plusmn; 0.0066</td><td>0.8653 &plusmn; 0.0057</td><td>0.8629 &plusmn; 0.0034</td></tr>
+              <tr class="input-4"><td>AnyAD</td><td>4</td><td>All 4 inputs</td><td>0.7800 &plusmn; 0.0016</td><td>0.8925 &plusmn; 0.0013</td><td>0.8639 &plusmn; 0.0064</td><td>0.8924 &plusmn; 0.0018</td></tr>
+              <tr class="input-4"><td>UniMMAD</td><td>4</td><td>All 4 inputs</td><td>0.7015 &plusmn; 0.0019</td><td>0.8330 &plusmn; 0.0015</td><td>0.7924 &plusmn; 0.0043</td><td>0.8536 &plusmn; 0.0092</td></tr>
+              <tr class="input-2">
+                <td rowspan="2">Ours</td>
+                <td>ReMoE-2I</td>
+                <td>2</td>
+                <td>Avg. 2 pairs</td>
+                <td>0.7994 &plusmn; 0.0041</td>
+                <td>0.8908 &plusmn; 0.0032</td>
+                <td>0.8822 &plusmn; 0.0272</td>
+                <td>0.8977 &plusmn; 0.0126</td>
+              </tr>
+              <tr class="input-4">
+                <td><strong>ReMoE</strong></td>
+                <td>4</td>
+                <td>All 4 inputs</td>
+                <td class="result-number">0.8682 &plusmn; 0.0033</td>
+                <td class="result-number">0.9358 &plusmn; 0.0020</td>
+                <td class="result-number">0.9166 &plusmn; 0.0219</td>
+                <td class="result-number">0.9198 &plusmn; 0.0225</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            ReMoE achieves state-of-the-art performance in both settings. On the private dataset, it reaches an I-AUROC of <strong>0.8682</strong> and an I-AP of <strong>0.9358</strong>, outperforming the strongest four-input visual-only baseline by 8.82 and 4.33 percentage points. On OCTA500-3MM, it improves I-AUROC and I-AP by 5.27 and 2.74 percentage points.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Qualitative Anomaly Maps</h2>
+      <img class="paper-figure" src="./static/images/qualitative.png" alt="Qualitative anomaly maps on the private OCT and OCTA dataset">
+      <p class="figure-caption has-text-justified">
+        Qualitative anomaly maps on the private OCT/OCTA dataset. Red boxes indicate abnormal regions annotated by an ophthalmologist according to the corresponding clinical reports. ReMoE produces stronger, more spatially coherent responses near report-indicated regions while reducing background activation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@inproceedings{nie2027remoe,
+  title     = {ReMoE: Report-Guided Mixture-of-Experts for Multimodal OCT/OCTA Anomaly Detection},
+  author    = {Zihan Nie and Qincheng Qiao and Muhao Xu and Wei Feng and Xinguo Hou and Weiye Song and Zongyuan Ge},
+  booktitle = {},
+  year      = {2027}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="./static/ReMoE.pdf" title="View the ReMoE paper">
+        <i class="fas fa-file-pdf fa-2x"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/cc-caicai/ReMoE" title="View the ReMoE code repository">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+    </div>
+    <div class="columns is-centered" style="margin-top: 20px;">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is licensed under a
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>Template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
