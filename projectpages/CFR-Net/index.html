@@ -67,19 +67,13 @@
           </h1>          
           <div class="is-size-5 publication-authors">
     <span class="author-block">
-        <a href="https://cc-caicai.github.io/">Zihan Nie</a><sup>1,2</sup>,
+        <a href="https://cc-caicai.github.io/">Zihan Nie</a><sup>1,2,4</sup>,
     </span>
     <span class="author-block">
         <a href="https://xmh-l.github.io/">Muhao Xu</a><sup>1,2</sup>,
     </span>
     <span class="author-block">
         <a href="https://research.monash.edu/en/persons/wei-feng/">Wei Feng</a><sup>3,4</sup>,
-    </span>
-    <span class="author-block">
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=0JzLZ0kAAAAJ">Yuan Cui</a><sup>1,2</sup>,
-    </span>
-    <span class="author-block">
-        <a href="https://www.mech.sdu.edu.cn/info/1135/137951.htm">Hua Wei</a><sup>1,2</sup>,
     </span>
     <span class="author-block">
         <a href="https://scholar.google.com/citations?hl=zh-CN&user=tRi0nMcAAAAJ">Sijie Niu</a><sup>5</sup>,
@@ -91,7 +85,10 @@
         <a href="https://bme.bjmu.edu.cn/szdw/211941.htm">Xunbin Wei</a><sup>6,7,8</sup>,
     </span>
     <span class="author-block">
-        <a href="https://scholar.google.com/citations?user=Ybvxp5oAAAAJ&hl=zh-CN&oi=ao">Weiye Song</a><sup>*1,2</sup>,
+        Jianmei Li<sup>1,2,*</sup>,
+    </span>
+    <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=Ybvxp5oAAAAJ&hl=zh-CN&oi=ao">Weiye Song</a><sup>1,2,*</sup>,
     </span>
     <span class="author-block">
         <a href="https://research.monash.edu/en/persons/zongyuan-ge/?_gl=1*cu077a*_ga*MTgzMjIxNTU4OC4xNzc3NDQwMTg4*_ga_E3JVRYC3HG*czE3ODAwMjU4NzckbzExJGcxJHQxNzgwMDI1ODgzJGo1NCRsMCRoMA..">Zongyuan Ge</a><sup>3,4</sup>
@@ -114,31 +111,12 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link.
               <span class="link-block">
-                <a href="" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a> -->
-              <!-- </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2503.13082 "
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://arxiv.org/abs/2607.11509" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                </a>
-              </span> -->
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://youtu.be/qM88ArDTKVA" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -149,6 +127,7 @@
                   </span>
                   <span>Code</span>
                   </a>
+              </span>
             </div>
 
           </div>
@@ -161,9 +140,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/abstract.png" alt="Abstract of the Method" style="width: 100vw; height: auto; display: block;">
+      <img src="./static/images/abstract.png" alt="Conceptual comparison of knowledge-distillation frameworks and CFR-Net" style="width: 100%; height: auto; display: block;">
       <h2 class="subtitle" style="text-align: justify;">
-        To address domain discrepancy and complex feature patterns in medical image anomaly detection, we propose CFR-Net, a collaborative feature refinement framework trained only on normal data. CFR-Net refines features from a frozen teacher encoder and a trainable student encoder using a shared Multi-Path Feature Refinement Module (MPFRM), allowing generic visual references and medical-domain adaptive representations to be processed under common refinement rules. With cross-space consistency, variance-sensitive weighting, and dynamic homework-set reorganization, CFR-Net achieves competitive anomaly classification and strong anomaly localization across multiple medical imaging benchmarks.
+        CFR-Net learns medical normality through a coupled process: shared feature conditioning aligns teacher and student representations before decoding, while cross-space consistency promotes reciprocal normal reconstruction after decoding. Homework set reorganization periodically refreshes the normal training subsets to stabilize optimization.
       </h2>
     </div>
   </div>
@@ -179,12 +158,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Medical image anomaly detection remains challenging because networks pretrained on natural images often exhibit limited adaptability to medical images, where abnormal patterns appear as fine-grained local shifts, multi-scale contextual mismatches, and orientation-sensitive structural deviations. To address this, we propose the <strong>Collaborative Feature Refinement Network (CFR-Net)</strong>, which combines shared teacher-student <strong>feature refinement before decoding</strong> with <strong>cross-space consistency after decoding</strong>. CFR-Net refines frozen teacher features and trainable student features using a <strong>Multi-Path Feature Refinement Module (MPFRM)</strong> with shared parameters, imposing <strong>common multi-path refinement rules</strong> on generic visual references and representations adapted to the medical domain, thereby mitigating domain discrepancy while modeling local, multi-scale, and orientation-sensitive feature characteristics. A <strong>variance-sensitive objective</strong> and <strong>dynamic "homework set" reorganization</strong> further support layer-adaptive consistency learning. Experiments on medical benchmarks show that CFR-Net achieves competitive anomaly classification and strong anomaly localization performance when trained on normal data.
+            Medical image anomaly detection is central to timely diagnosis and clinical decision support, yet abnormal samples are costly to collect because of disease rarity, privacy concerns, and expert workload. This motivates unsupervised learning from normal images, where abnormalities are detected as deviations from learned normal patterns. However, medical anomalies are often subtle, local, and intertwined with normal anatomical variations, which complicates reliable normality modeling. Distillation-based methods support normality modeling by using frozen pretrained teachers as stable feature references, yet mismatches between generic teacher priors and student representations adapted to medical images can produce residuals unrelated to abnormalities in conventional distillation pipelines. To address this limitation, we propose the <strong>Collaborative Feature Refinement Network</strong>, which learns normality through a coupled process of shared feature conditioning before decoding and cross-space consistency after decoding. Shared feature conditioning performs medical-aware conditioning on teacher and student features under common rules, while cross-space consistency constrains each decoded stream with the complementary encoder representation for reciprocal normal reconstruction. The coupled process is further stabilized by the homework set reorganization strategy, which periodically refreshes normal training subsets. Experiments on six medical image benchmarks show competitive anomaly classification and strong anomaly localization performance.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
 </section>
 
 <!-- Method Section -->
@@ -193,16 +173,16 @@
             <div class="columns is-centered has-text-centered">
                 <div style="text-align: center;">
                     <h2 class="title is-3">Method</h2>
-                    <img src="./static/images/method.png" alt="Architecture of the Method" />
+                    <img src="./static/images/method.png" alt="Overall architecture of CFR-Net" />
                     <div class="content has-text-justified" style="margin-top: 2rem;">
                         <p>
-                            CFR-Net introduces input-side collaborative refinement, where frozen teacher features and trainable student features are refined by MPFRM with shared parameters before decoding.
+                            CFR-Net uses a frozen teacher encoder as a stable generic feature reference and a trainable student encoder to adapt representations to medical images. Before decoding, the Shared Feature Conditioning Module (SFCM) applies the same medical-aware conditioning rules to the hierarchical features from both encoders.
                         </p>  
                         <p>
-                            After decoding, CFR-Net applies output-side cross-space consistency, constraining each decoded stream with the complementary encoder feature space.
+                            After decoding, cross-space consistency constrains each decoded stream with the complementary encoder representation: teacher-origin decoded features are matched to the student feature space, while student-origin decoded features are matched to the teacher feature space. This reciprocal knowledge flow encourages normal reconstruction across both representation spaces.
                         </p>   
                         <p>
-                            Training is further supported by variance-sensitive feature-level weighting and a dynamic homework-set strategy, stabilizing normal-only optimization across hierarchical representations.
+                            Hierarchical discrepancy weighting emphasizes informative residuals through threshold amplification and dispersion-based weighting. Homework set reorganization periodically repartitions normal samples into training and homework subsets, allowing the model to revisit difficult normal cases during optimization.
                         </p>
                     </div>
                 </div>
@@ -214,11 +194,11 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div style="text-align: center;">
-                    <h2 class="title is-3">Multi-Path Feature Refinement Module</h2>
-                    <img src="./static/images/MPFRM.png" alt="Architecture of the Method" />
+                    <h2 class="title is-3">Shared Feature Conditioning Module</h2>
+                    <img src="./static/images/SFCM.png" alt="Architecture of the Shared Feature Conditioning Module" />
                     <div class="content has-text-justified" style="margin-top: 2rem;">
                         <p>
-                            MPFRM refines hierarchical teacher and student encoder features through three complementary branches. The variance-weighted branch models patch-level feature dispersion, the multi-scale pyramid branch aggregates contextual information across receptive fields, and the asymmetric convolution branch captures orientation-sensitive structural patterns. Their outputs are integrated with the input encoder features through residual connections before decoding.
+                            SFCM conditions teacher and student features with shared parameters through three complementary paths. The <strong>Patch-Dispersion Branch</strong> derives channel and patch prompts from feature dispersion, the <strong>Pyramid Context Branch</strong> aggregates contextual information at multiple spatial scales, and the <strong>Asymmetric Structure Branch</strong> captures horizontal, vertical, and harmonic structural cues. Their outputs are fused with the input through residual connections before decoding.
                         </p>  
                     </div>
                 </div>
@@ -230,27 +210,6 @@
 
 <hr>
 
-<section class="hero is-light is-small"> <!-- Use 'hero' to extend background fully -->
-  <div class="hero-body"> <!-- Ensures the background fills the full width -->
-    <div class="container"> <!-- Remove 'is-max-desktop' to allow full width content -->
-
-      <!-- Paper video. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/qM88ArDTKVA" title="CFR-Net video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-      <!--/ Paper video. -->
-
-    </div>
-  </div>
-</section>
-
-<hr>
-
 <section class="section">
   <div class="container" style="max-width: 100%;"> <!-- Remove max width limit -->
 
@@ -259,11 +218,11 @@
         <h2 class="title is-3">Comparison with Existing Methods on AUROC</h2>
 
         <div class="has-text-centered">
-          <img src="./static/images/table.png" alt="Result Comparison" style="max-width: 60%; width: auto; height: auto; display: block; margin: 0 auto;" />
+          <img src="./static/images/table.png" alt="Result Comparison" style="max-width: 88%; width: auto; height: auto; display: block; margin: 0 auto;" />
         </div>
         <br />
        <p style="font-size: 1rem; color: #444; max-width: 900px; margin: 0 auto 20px auto; text-align: left;">
-        In the table, bold values indicate the best results and underlined values indicate the second-best results. CFR-Net achieves the best performance in 7 out of 9 evaluated tasks, showing particularly strong anomaly localization results while maintaining competitive classification performance across different medical imaging benchmarks.
+        In the table, bold values indicate the best results and underlined values indicate the second-best results. Across HIS, OCT17, APTOS, BrainMRI, LiverCT, and RESC, CFR-Net achieves the best performance in 7 of the 9 evaluated tasks, with a mean classification AUROC of 87.23% and a mean localization AUROC of 98.61%.
       </p>
       </div>
     </div>
@@ -281,22 +240,12 @@
       
       <!-- Instruction text -->
       <p class="has-text-left" style="font-size: 1rem; margin-bottom: 15px;">
-       We present qualitative comparisons of anomaly localization maps and classification heatmaps. The results are arranged from left to right as: input image, predictions from state-of-the-art methods including CFLOW-AD, DiAD, msflow, and URD, our method, and ground truth annotations. CFR-Net produces more compact and spatially precise anomaly responses, especially around lesion regions and layer-wise abnormal structures.
+       We present qualitative comparisons of anomaly localization maps and classification heatmaps. The results are arranged from left to right as the input image, predictions from CFLOW-AD, RD4AD, PatchCore, MKD, SimpleNet, DiAD, MSFlow, and URD, CFR-Net, and the ground-truth annotation. CFR-Net produces more compact and spatially precise anomaly responses, especially around lesion regions and layer-wise abnormal structures.
       </p>
 
       
-      <div class="swiper swiper-container visualization-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="static/images/maps1.png" alt="Visualization result 1" /></div>
-          <div class="swiper-slide"><img src="static/images/maps2.png" alt="Visualization result 2" /></div>
-          <div class="swiper-slide"><img src="static/images/maps3.png" alt="Visualization result 3" /></div>
-          <div class="swiper-slide"><img src="static/images/maps4.png" alt="Visualization result 4" /></div>
-          <div class="swiper-slide"><img src="static/images/maps5.png" alt="Visualization result 5" /></div>
-          <div class="swiper-slide"><img src="static/images/maps6.png" alt="Visualization result 6" /></div>
-        </div>
-        <div class="swiper-button-prev visualization-swiper-prev"></div>
-        <div class="swiper-button-next visualization-swiper-next"></div>
-        <div class="swiper-pagination visualization-swiper-pagination"></div>
+      <div class="has-text-centered">
+        <img src="static/images/maps1.png" alt="Qualitative anomaly localization comparison on BrainMRI, LiverCT, and RESC" style="width: 100%; height: auto;" />
       </div>
 
       <!-- Fixed Annotation -->
@@ -388,7 +337,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{nie2026cfr,
   title={CFR-Net: Collaborative Feature Refinement Network for Medical Image Anomaly Detection},
-  author={Nie, Zihan and Xu, Muhao and Feng, Wei and Cui, Yuan and Wei, Hua and Niu, Sijie and Wan, Yi and Wei, Xunbin and Song, Weiye and Ge, Zongyuan},
+  author={Nie, Zihan and Xu, Muhao and Feng, Wei and Niu, Sijie and Wan, Yi and Wei, Xunbin and Li, Jianmei and Song, Weiye and Ge, Zongyuan},
   journal={},
   year={2026}
 }</code></pre>
@@ -400,11 +349,11 @@
   <div class="container">
       <div class="content has-text-centered">
           <!-- Link to Paper -->
-          <a class="icon-link" href="" target="_blank" title="View Paper on arXiv">
+          <a class="icon-link" href="https://arxiv.org/abs/2607.11509" target="_blank" title="View Paper on arXiv">
               <i class="fas fa-file-pdf fa-2x"></i>
           </a>
           <!-- Link to GitHub -->
-          <a class="icon-link" class="external-link" href="https://github.com/cc-caicai/CFR-Net" target="_blank" title="View Project on GitHub">
+          <a class="icon-link external-link" href="https://github.com/cc-caicai/CFR-Net" target="_blank" title="View Project on GitHub">
               <i class="fab fa-github fa-2x"></i>
           </a>
       </div>
