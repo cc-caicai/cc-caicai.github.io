@@ -169,11 +169,11 @@
 
 <!-- Method Section -->
 <section class="section">
-        <div class="container is-max-desktop">
+        <div class="container" style="max-width: 1200px;">
             <div class="columns is-centered has-text-centered">
                 <div style="text-align: center;">
                     <h2 class="title is-3">Method</h2>
-                    <img src="./static/images/method.png" alt="Overall architecture of CFR-Net" />
+                    <img src="./static/images/method.png" alt="Overall architecture of CFR-Net" style="width: 100%; height: auto;" />
                     <div class="content has-text-justified" style="margin-top: 2rem;">
                         <p>
                             CFR-Net uses a frozen teacher encoder as a stable generic feature reference and a trainable student encoder to adapt representations to medical images. Before decoding, the Shared Feature Conditioning Module (SFCM) applies the same medical-aware conditioning rules to the hierarchical features from both encoders.
@@ -218,7 +218,7 @@
         <h2 class="title is-3">Comparison with Existing Methods on AUROC</h2>
 
         <div class="has-text-centered">
-          <img src="./static/images/table.png" alt="Result Comparison" style="max-width: 88%; width: auto; height: auto; display: block; margin: 0 auto;" />
+          <img src="./static/images/table.png" alt="Result Comparison" style="max-width: 1063px; width: 95%; height: auto; display: block; margin: 0 auto;" />
         </div>
         <br />
        <p style="font-size: 1rem; color: #444; max-width: 900px; margin: 0 auto 20px auto; text-align: left;">
